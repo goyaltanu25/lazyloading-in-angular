@@ -3,8 +3,17 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'customers',
+    loadChildren: './customers/customers.module#CustomersModule'
+  },
+  {
+    path: 'orders',
+    loadChildren: './orders/orders.module#OrdersModule'
+  },
+  {
     path: '',
-    children: []
+    redirectTo: '',
+    pathMatch: 'full'
   }
 ];
 
